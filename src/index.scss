@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+$dark-cyan: hsl(158, 36%, 37%);
+$dark-cyan-darker: #194131;
+$cream: hsl(30, 38%, 92%);
+
+$very-dark-blue: hsl(212, 21%, 14%);
+$dark-grayish-blue: hsl(228, 12%, 48%);
+$white: hsl(0, 0%, 100%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  font-size: 62.5%;
+  background-color: $cream;
+  color: $dark-grayish-blue;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.product-preview {
+  display: flex;
+  border-radius: 0.6rem;
+  max-width: 37.5rem;
+  background-color: $white;
+
+  &__image {
+    img {
+      width: 18.75rem;
+      display: block;
+      border-radius: 0.6rem 0 0 0.6rem;
+    }
+  }
+
+  &__info {
+    padding: 2rem;
+
+    &-sub-heading {
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+      font-weight: 500;
+      font-size: 0.8rem;
+      color: $dark-grayish-blue;
+      margin-bottom: 1.6rem;
+    }
+
+    &-heading {
+      font-size: 2rem;
+      font-family: "Fraunces", serif;
+      margin-bottom: 1.7rem;
+      color: $very-dark-blue;
+    }
+
+    &-description {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      margin-bottom: 1.7rem;
+    }
+
+    &-prices {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.7rem;
+
+      &-price {
+        font-family: "Fraunces", serif;
+        font-size: 2rem;
+        color: $dark-cyan;
+        font-weight: 700;
+      }
+
+      &-oldprice {
+        text-decoration: line-through;
+        font-size: 0.8rem;
+      }
+    }
+
+    &-btn {
+      display: block;
+      cursor: pointer;
+      padding: 1rem;
+      border-radius: 0.6rem;
+      width: 100%;
+      background-color: $dark-cyan;
+      border: none;
+      color: $white;
+      font-size: 0.9rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+
+      &:hover,
+      &:active {
+        background-color: $dark-cyan-darker;
+      }
+    }
+  }
+}
+
+@media (max-width: 40rem) {
+  .center {
+    display: block;
+    height: auto;
+  }
+
+  .product-preview {
+    flex-direction: column;
+    margin: 1rem;
+
+    &__image {
+      img {
+        content: url("/assets/image-product-mobile.jpg");
+        width: 100%;
+        border-radius: 0.6rem 0.6rem 0 0;
+        display: block;
+      }
+    }
+  }
+}

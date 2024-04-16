@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  font-size: 62.5%;
+  background-color: #f2ebe3;
+  color: #6c7289; }
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+
+.product-preview {
+  display: flex;
+  border-radius: 0.6rem;
+  max-width: 37.5rem;
+  background-color: white; }
+  .product-preview__image img {
+    width: 18.75rem;
+    display: block;
+    border-radius: 0.6rem 0 0 0.6rem; }
+  .product-preview__info {
+    padding: 2rem; }
+    .product-preview__info-sub-heading {
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+      font-weight: 500;
+      font-size: 0.8rem;
+      color: #6c7289;
+      margin-bottom: 1.6rem; }
+    .product-preview__info-heading {
+      font-size: 2rem;
+      font-family: "Fraunces", serif;
+      margin-bottom: 1.7rem;
+      color: #1c232b; }
+    .product-preview__info-description {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      margin-bottom: 1.7rem; }
+    .product-preview__info-prices {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.7rem; }
+      .product-preview__info-prices-price {
+        font-family: "Fraunces", serif;
+        font-size: 2rem;
+        color: #3c8067;
+        font-weight: 700; }
+      .product-preview__info-prices-oldprice {
+        text-decoration: line-through;
+        font-size: 0.8rem; }
+    .product-preview__info-btn {
+      display: block;
+      cursor: pointer;
+      padding: 1rem;
+      border-radius: 0.6rem;
+      width: 100%;
+      background-color: #3c8067;
+      border: none;
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem; }
+      .product-preview__info-btn:hover, .product-preview__info-btn:active {
+        background-color: #194131; }
+
+@media (max-width: 40rem) {
+  .center {
+    display: block;
+    height: auto; }
+  .product-preview {
+    flex-direction: column;
+    margin: 1rem; }
+    .product-preview__image img {
+      content: url("/assets/image-product-mobile.jpg");
+      width: 100%;
+      border-radius: 0.6rem 0.6rem 0 0;
+      display: block; } }
