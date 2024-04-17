@@ -25,7 +25,7 @@ function App() {
               <p className="product-preview__info-prices-oldprice">$169.99</p>
             </div>
             <button className="product-preview__info-btn">
-              <img src="src/assets/icon-cart.svg" alt="" />
+              <img src="assets/icon-cart.svg" alt="" />
               Add to Cart
             </button>
           </div>
